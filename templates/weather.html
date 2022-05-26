@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>weather</title>
+    <style>
+        body{background-color: cornflowerblue;}
+        .button{
+            background-color: skyblue;
+            border-color: skyblue;
+            border-style: hidden;
+            border-width: 5px;}
+        div{ background-color: aqua;
+            font-family:sans-serif;}
+        input{border: 0px;}
+        table{background-color: aqua;
+        border-color: black;
+         border-style: groove;}
+        .cityy{ text-transform: capitalize;}
+        
+    </style>
+</head>
+
+<body>
+   
+    <form action="localhost:5000/weather/<city>" method="post">
+   
+        <center> <div ><i><h1 >WEATHER</h1> </i></div>
+   
+    
+  <br>
+  <br>
+  <br>
+  <br>
+   <table border="1" cellpadding="40px" >
+       <tr>
+           <td rowspan="4" height="10px" width="10px"><img src={{result["img"]}} alt="img"></td>
+           <td class="cityy" >City :{{result["city"]}}</td>
+       </tr>
+       <tr>
+           <td>Weather :{{result["description"]}}</td>
+       </tr> <tr>
+        <td>Temperature :{{result["temp"]}}</td>
+       </tr>
+      
+       <tr>
+        <td>Humidity :{{result["humidity"]}}</td>
+       </tr>
+   </table></center>
+   </form></body>
